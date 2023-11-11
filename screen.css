@@ -1,0 +1,71 @@
+.da-slider {
+  width: 100%;
+  min-width: 520px;
+  height: 441px;
+  position: relative;
+  margin: 30px auto; /* 元素只會顯示到所指定的寬度，剩餘的寬度會平均分配在左右兩側 */
+  overflow: hidden; /* 元素內容超出元素時，會隱藏。 */
+  background: transparent repeat 0% 0;
+  /* background-color、background-image、background-attachment、background-repeat、background-poition/background-size */
+  /* transparent:元素的背景為透明、repeat-背景圖片呈現的方式、0% 0-背景的 poition */
+  /* background-poition、background-size 兩者中間要用 / 符號分開 */
+  -webkit-transition: background-position 1.4s ease-in-out;
+  -moz-transition: background-position 1.4s ease-in-out 0.3s;
+  -ms-transition: background-position 1.4s ease-in-out 0.3s;
+  -o-transition: background-position 1.4s ease-in-out 0.3s;
+  transition: background-position 1.4s ease-in-out 0.3s;
+  /* transition-property:要轉換的CSS屬性、transition-duration:轉換需要的時間(s or ms)、transition-timing-function:轉換時的速度曲線(ease-in-out為緩入緩出)、transition-delay:延遲多久轉換(s or ms) */
+}
+
+.da-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: "trump_town_proregular";
+  text-align: left; /* 文字的水平對齊方式 */
+}
+
+.da-slide .da-title,
+.da-slide .da-img {
+  position: absolute;
+  opacity: 0; /* 物件的透明度，數值越小越透明 (0.0 ~ 1.0)*/
+  left: 110%;
+}
+
+.da-slide .da-title {
+  top: 80px;
+  color: #fff;
+  width: 20%;
+  white-space: nowrap;
+  z-index: 10;
+  font-size: 4em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.da-slide .da-text {
+  width: 40%;
+  top: 150px;
+  color: white;
+  font-size: 28px;
+  line-height: 1.2em;
+  overflow: hidden;
+  font-weight: 100;
+}
+.da-slide .da-img {
+  text-align: center;
+  width: 50%;
+  top: 20px;
+  height: 256px;
+  line-height: 320px;
+  left: 110%;
+}
+.da-slide .da-link {
+  bottom: 25px;
+  width: 100px;
+}
+.da-slide .da-link a {
+  white-space: nowrap;
+}

@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="" />
+    <meta name="author" content="Chang Yu" />
+    <title>ChangWeb</title>
+    <!-- <base target="_blank" /> -->
+
+    <!--Title ICON-->
+    <link rel="icon" href="./dog-fill-svgrepo-com.ico" type="image/x-icon" / >
+
+    <!--CSS-->
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!--header JS-->
+    <script type="text/javascript" src="./js/123.js"></script>
+    <script type="text/javascript" src="./header/js/jquery.js"></script>
+
+    <script type="text/javascript">
+      var head = $(".head").height();
+      $(window).scroll(function () {
+        var topScr = $(window).scrollTop();
+        if (topScr > head) {
+          $(".header-box").addClass("fixed");
+        } else {
+          $(".header-box").removeClass("fixed");
+        }
+      });
+    </script>
+
+    <!--Blog-->
+    <script src="./js/blog/custom.js"></script>
+    <script src="./js/blog/isotope.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./js/blog/jquery-1.11.0.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/blog/circle.js"></script>
+
+    <!---Game JS----->
+    <script type="text/javascript" src="js/game/jquery-1.7.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/game/jquery.carousel.min.js"
+    ></script>
+    <script type="text/javascript" src="js/game/jquery.mousewheel.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function ($) {
+        $("#carousel").carousel({
+          width: 870,
+          height: 450,
+          itemWidth: 120,
+          horizontalRadius: 270,
+          verticalRadius: 85,
+          resize: false,
+          mouseScroll: false,
+          mouseDrag: true,
+          scaleRatio: 0.4,
+          scrollbar: true,
+          tooltip: true,
+          mouseWheel: true,
+          mouseWheelReverse: true,
+        });
+      });
+    </script>
+
+    <!---Music JS----->
+    <link rel="stylesheet" href="./music/css/css/font-awesome.min.css" />
+    <!-- <link rel="stylesheet" href="css/index.css" /> -->
+
+    <!---Cook JS----->
+    <script type="text/javascript" src="js/cook/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="js/cook/base.js"></script>
+
+    <!---Tool JS----->
+    <script type="text/javascript" src="js/tool/jquery.js"></script>
+    <script type="text/javascript" src="js/tool/jqueryPhoto.js"></script>
+
+    <!---Return Top JS----->
+    <script type="text/javascript" src="js/Return_Top/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(window).scrollTop() >= 100) {
+            $(".actGotop").fadeIn(300);
+          } else {
+            $(".actGotop").fadeOut(300);
+          }
+        });
+        $(".actGotop").click(function () {
+          $("html,body").animate({ scrollTop: "0px" }, 800);
+        });
+      });
+    </script>
+
+    <!-- Demo JS-->
+    <script type="text/javascript" src="./js/damo/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="./js/damo/owl.carousel.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#owl-demo").owlCarousel({
+          items: 1,
+          navigation: true,
+          navigationText: ["上一個", "下一個"],
+          autoPlay: true,
+          stopOnHover: true,
+
+          afterInit: function () {
+            var $t = $(".owl-pagination span");
+            $t.each(function (i) {
+              $(this).before('<img src="../demo/images/t' + (i + 1) + '.svg">');
+            });
+          },
+        });
+      });
+    </script>
+
+    <!----move-top-path---->
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+          event.preventDefault();
+          $("html,body").animate(
+            { scrollTop: $(this.hash).offset().top },
+            1200
+          );
+        });
+      });
+    </script>
+
+    <!---favicon.ico----->
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body>
+    <!---start-header----->
+    <div class="header-box">
+      <div class="wrap">
+        <div class="top-header">
+          <div class="logo">
+            <span> </span>
+            <a href="index.html">ChangYu Home</a>
+          </div>
+          <div class="top-nav">
+            <ul>
+              <li class="active"><a href="#home" class="scroll">Demo</a></li>
+              <li><a href="#about" class="scroll">About</a></li>
+              <li><a href="#Blog" class="scroll">Blog</a></li>
+              <li><a href="#game" class="scroll">Game</a></li>
+              <li><a href="#music" class="scroll">Music</a></li>
+              <li><a href="#code" class="scroll">Code</a></li>
+              <li><a href="#cook" class="scroll">Cook</a></li>
+              <li><a href="#tool" class="scroll">Tool</a></li>
+              <li><a href="#contact" class="scroll">Contact</a></li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <!---End-header----->
+
+    <!-- Demo
+    <div class="demo-box">
+      <div id="owl-demo" class="owl-carousel">
+        <div class="itme">
+          <ul>
+            <li class="li1">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+                <p>待更新</p>
+              </div>
+            </li>
+            <li class="li2">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="itme">
+          <ul>
+            <li class="li1">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+                <p>待更新</p>
+              </div>
+            </li>
+            <li class="li2">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="itme">
+          <ul>
+            <li class="li1">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+                <p>待更新</p>
+              </div>
+            </li>
+            <li class="li2">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="itme">
+          <ul>
+            <li class="li1">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+                <p>待更新</p>
+              </div>
+            </li>
+            <li class="li2">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="itme">
+          <ul>
+            <li class="li1">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+                <p>待更新</p>
+              </div>
+            </li>
+            <li class="li2">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="itme">
+          <ul>
+            <li class="li1">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+                <p>待更新</p>
+              </div>
+            </li>
+            <li class="li2">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="itme">
+          <ul>
+            <li class="li1">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+                <p>待更新</p>
+              </div>
+            </li>
+            <li class="li2">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3>
+                  <a href="">待更新</a>
+                </h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+            <li class="li3">
+              <a href=""><img src="./demo/images/17.jpg" alt="" /></a>
+              <div class="txt">
+                <h3><a href="">待更新</a></h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <!-- Demo end -->
+
+    <!---start-content---->
+    <div class="profile-box">
+      <div class="wrap">
+        <!---start-top-grids---->
+        <div class="team-head" style="padding-top: 60px">
+          <h3>Profile</h3>
+          <p>
+            裡面包含關於我的介紹、技能包與人生經歷等，透過這些來更了解我吧!!
+          </p>
+        </div>
+        <div class="profiles" id="about">
+          <div class="profile">
+            <a><img src="./content/images/icons8-user-male.svg" alt="" /></a>
+            <a><span>介紹</span></a>
+          </div>
+          <div class="profile">
+            <a><img src="./content/images/icons8-support.svg" alt="" /></a>
+            <a><span>技能包</span></a>
+          </div>
+          <div class="profile">
+            <a><img src="./content/images/icons8-document.svg" alt="" /></a>
+            <a><span>經歷</span></a>
+          </div>
+          <a class="contentbtng" href="./content/about.html">點我看更多</a>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <!---End-top-grids---->
+    </div>
+    <!---End-Content---->
+
+    <!---start-blog----->
+    <div class="blog-box" id="Blog">
+      <div class="team-head">
+        <h3>Blog</h3>
+        <p>可利用左邊的星球選擇想看的Bolg喔!</p>
+      </div>
+      <div class="blog-boxes">
+        <div class="holderCircle">
+          <div class="dotCircle">
+            <span class="itemDot active itemDot1" data-tab="1" data-tab_2="1">
+              <img src="./blog/images/FoodShare.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+            <span class="itemDot itemDot2" data-tab="2" data-tab_2="2">
+              <img src="./blog/images/BookShare.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+            <span class="itemDot itemDot3" data-tab="3" data-tab_2="3">
+              <img src="./blog/images/Traveler.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+            <span class="itemDot itemDot4" data-tab="4" data-tab_2="4">
+              <img src="./blog/images/Magic.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+            <span class="itemDot itemDot5" data-tab="5" data-tab_2="5">
+              <img src="./blog/images/Diary.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+            <span class="itemDot itemDot6" data-tab="6" data-tab_2="6">
+              <img src="./blog/images/Clothes.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+            <span class="itemDot itemDot7" data-tab="7" data-tab_2="7">
+              <img src="./blog/images/Sport.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+            <span class="itemDot itemDot8" data-tab="8" data-tab_2="8">
+              <img src="./blog/images/Car.svg" alt="" />
+              <span class="forActive"></span>
+            </span>
+          </div>
+          <div class="contentCircle">
+            <a href="./blog/GoodFoodShare.html"
+              ><div class="CirItem active CirItem1">美食分享</div></a
+            >
+            <a href="./blog/GoodBookShare.html">
+              <div class="CirItem CirItem2">書籍分享</div>
+            </a>
+            <a href="./blog/TravelSharing.html">
+              <div class="CirItem CirItem3">旅遊分享</div>
+            </a>
+            <a href="./blog/MagicShare.html">
+              <div class="CirItem CirItem4">魔術分享</div>
+            </a>
+            <a href="./blog/LiveShare.html">
+              <div class="CirItem CirItem5">生活紀錄</div>
+            </a>
+            <a href="./blog/OutfitSharing.html">
+              <div class="CirItem CirItem6">穿搭紀錄</div>
+            </a>
+            <a href="./blog/SportsShare.html">
+              <div class="CirItem CirItem7">運動紀錄</div>
+            </a>
+            <a href="./blog/Rush+.html">
+              <div class="CirItem CirItem8">跑跑紀錄</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- <div class="boxbox">
+          <div class="right-blog-box right-blog-box_1 active"></div>
+          <div class="right-blog-box right-blog-box_2"></div>
+          <div class="right-blog-box right-blog-box_3"></div>
+          <div class="right-blog-box right-blog-box_4"></div>
+          <div class="right-blog-box right-blog-box_5"></div>
+          <div class="right-blog-box right-blog-box_6"></div>
+          <div class="right-blog-box right-blog-box_7"></div>
+          <div class="right-blog-box right-blog-box_8"></div>
+        </div> -->
+      </div>
+      <div class="isotope-wrapper">
+        <form class="isotope-toolbar">
+          <label
+            ><input
+              type="radio"
+              data-type="*"
+              checked=""
+              name="isotope-filter"
+            />
+            <span>all</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="運動紀錄"
+              name="isotope-filter"
+            />
+            <span>運動紀錄</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="旅遊分享"
+              name="isotope-filter"
+            />
+            <span>旅遊分享</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="美食分享"
+              name="isotope-filter"
+            />
+            <span>美食分享</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="書籍分享"
+              name="isotope-filter"
+            />
+            <span>書籍分享</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="穿搭紀錄"
+              name="isotope-filter"
+            />
+            <span>穿搭紀錄</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="跑跑紀錄"
+              name="isotope-filter"
+            />
+            <span>跑跑紀錄</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="魔術分享"
+              name="isotope-filter"
+            />
+            <span>魔術分享</span></label
+          >
+          <label
+            ><input
+              class="itemDot2"
+              type="radio"
+              data-type="生活紀錄"
+              name="isotope-filter"
+            />
+            <span>生活紀錄</span></label
+          >
+        </form>
+        <div class="isotope-box">
+          <div class="isotope-item" data-type="運動紀錄">
+            <figure class="snip1321">
+              <img src="./content/images/portfolio-01.jpg" alt="sq-sample26" />
+              <figcaption>
+                <a
+                  href="./images/portfolio-01.jpg"
+                  data-lightbox="image-1"
+                  data-title="Caption"
+                  ><i class="fa fa-search"></i
+                ></a>
+                <h4>First Title</h4>
+                <span>free to use our template</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="isotope-item" data-type="people">
+            <figure class="snip1321">
+              <img src="./content/images/portfolio-01.jpg" alt="sq-sample26" />
+              <figcaption>
+                <a
+                  href="./images/portfolio-01.jpg"
+                  data-lightbox="image-1"
+                  data-title="Caption"
+                  ><i class="fa fa-search"></i
+                ></a>
+                <h4>First Title</h4>
+                <span>free to use our template</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="isotope-item" data-type="people">
+            <figure class="snip1321">
+              <img src="assets/images/portfolio-02.jpg" alt="sq-sample26" />
+              <figcaption>
+                <a
+                  href="assets/images/portfolio-02.jpg"
+                  data-lightbox="image-1"
+                  data-title="Caption"
+                  ><i class="fa fa-search"></i
+                ></a>
+                <h4>Second Title</h4>
+                <span>please tell your friends</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="isotope-item" data-type="animals">
+            <figure class="snip1321">
+              <img src="assets/images/portfolio-03.jpg" alt="sq-sample26" />
+              <figcaption>
+                <a
+                  href="assets/images/portfolio-03.jpg"
+                  data-lightbox="image-1"
+                  data-title="Caption"
+                  ><i class="fa fa-search"></i
+                ></a>
+                <h4>Item Third</h4>
+                <span>customize anything</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="isotope-item" data-type="people">
+            <figure class="snip1321">
+              <img src="assets/images/portfolio-04.jpg" alt="sq-sample26" />
+              <figcaption>
+                <a
+                  href="assets/images/portfolio-04.jpg"
+                  data-lightbox="image-1"
+                  data-title="Caption"
+                  ><i class="fa fa-search"></i
+                ></a>
+                <h4>Item Fourth</h4>
+                <span>Re-distribution not allowed</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="isotope-item" data-type="nature">
+            <figure class="snip1321">
+              <img src="assets/images/portfolio-05.jpg" alt="sq-sample26" />
+              <figcaption>
+                <a
+                  href="assets/images/portfolio-05.jpg"
+                  data-lightbox="image-1"
+                  data-title="Caption"
+                  ><i class="fa fa-search"></i
+                ></a>
+                <h4>Fifth Awesome</h4>
+                <span>Ut sollicitudin risus</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="isotope-item" data-type="animals">
+            <figure class="snip1321">
+              <img src="assets/images/portfolio-06.jpg" alt="sq-sample26" />
+              <figcaption>
+                <a
+                  href="assets/images/portfolio-06.jpg"
+                  data-lightbox="image-1"
+                  data-title="Caption"
+                  ><i class="fa fa-search"></i
+                ></a>
+                <h4>Awesome Sixth</h4>
+                <span>Donec eget massa ante</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="./js/blog/isotope.min.js"></script>
+      <script src="./js/blog/custom.js"></script>
+    </div>
+
+    <!---End-blog----->
+
+    <!--- start-Game----->
+    <div class="GAME" id="game">
+      <div class="wrap">
+        <div class="team-head">
+          <h3>Game</h3>
+          <p>這是我的小遊戲網站，裡面記錄著我製作的小遊戲。</p>
+        </div>
+        <ul id="carousel">
+          <li>
+            <a href="./game/Flip Coin Game.html"
+              ><img src="./game/images/Flip Coin Game.png" alt=""
+            /></a>
+            <div class="tooltip">
+              <u>擲硬幣遊戲</u><br /><br /><img
+                src="./game/images/Flip Coin Game.png"
+                alt=""
+              />可以用來幫助您選擇事情時使用的好遊戲!!
+            </div>
+          </li>
+          <li>
+            <a href="./game/Lottery Spin Wheel.html"
+              ><img src="./game/images/Lottery Spin Wheel.png" alt=""
+            /></a>
+            <div class="tooltip">
+              <u>轉盤遊戲</u><br /><br /><img
+                src="./game/images/Lottery Spin Wheel.png"
+                alt=""
+              />數字1~6的轉盤小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href="./game/OOXX.html"
+              ><img src="./game/images/OOXX.png" alt=""
+            /></a>
+            <div class="tooltip">
+              <u>OOXX遊戲</u><br /><br /><img
+                src="./game/images/OOXX.png"
+                alt=""
+              />經典的圈圈叉叉小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+          <li>
+            <a href=""><img src="./game/images/waitting.png" alt="" /></a>
+            <div class="tooltip">
+              <u>待開發中</u><br /><br /><img
+                src="./game/images/waitting.png"
+                alt=""
+              />將會陸續推出更多小遊戲!
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--- end-Game----->
+
+    <!---start-Music---->
+    <div class="music-box" id="music">
+      <div class="team-head">
+        <h3>Music</h3>
+        <p>這是我的音樂網站，裡面記錄著我彈奏的歌曲。</p>
+      </div>
+      <div class="music-teams">
+        <div class="music-team">
+          <span><a class="Guitar"> </a></span>
+          <h4>
+            <a href="javascript:;" onClick="showMusicAll_1()">Guitar</a>
+          </h4>
+          <label>點上面的英文聽歌囉!</label>
+        </div>
+        <div class="music-team music-team-piano">
+          <span><a class="Piano"> </a></span>
+          <h4><a href="javascript:;" onClick="showMusicAll_2()">Piaon</a></h4>
+          <label>點上面的英文聽歌囉!</label>
+        </div>
+        <div class="music-team">
+          <span><a class="Sing"> </a></span>
+          <h4><a href="javascript:;" onClick="showMusicAll_3()">Sing</a></h4>
+          <label>點上面的英文聽歌囉!</label>
+        </div>
+      </div>
+
+      <div class="music">
+        <audio id="player_1" src="./music/audio/guitar/慢冷.mp3"></audio>
+        <div id="bz_music_1" class="bz_music bz_music_1">
+          <div class="music_info">
+            <div class="center_list">
+              <ul>
+                <li class="list_current">
+                  <a href="javascript:;">
+                    <span id="list_title_1" class="list_title">梁靜茹</span>
+                  </a>
+                  <a href="javascript:;">
+                    <span id="list_singer_1" class="list_singer">慢冷</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="right_btn">
+              <a id="btn_list" href="javascript:;" onClick="showMusicList_1()">
+                <span id="showHide_1" class="list-btn"></span>
+              </a>
+            </div>
+            <div id="process_1" class="process">
+              <span id="process_slide_1" class="process_slide"></span>
+            </div>
+          </div>
+          <div class="music_controls">
+            <div id="time_1" class="time">00:00</div>
+            <div class="play_controls">
+              <a
+                id="btnBackward"
+                href="javascript:;"
+                class="btn_back fa fa-backward"
+                onClick="backword_1()"
+              ></a>
+              <a
+                id="btnPlay_1"
+                href="javascript:;"
+                class="btn_play fa fa-play"
+              ></a>
+              <a
+                id="btnForward"
+                href="javascript:;"
+                class="btn_forward fa fa-forward"
+                onClick="forward_1()"
+              ></a>
+            </div>
+            <a
+              id="volumeOff"
+              class="volumeOff fa fa-volume-off"
+              href="javascript:;"
+              onClick="volumeOff_1()"
+            ></a>
+            <div id="volume_1" class="volume">
+              <span id="volume_slide_1" class="btn_slide"></span>
+            </div>
+            <a
+              id="volumeUp"
+              class="volumeUp fa fa-volume-up"
+              href="javascript:;"
+              onClick="volumeUp_1()"
+            ></a>
+          </div>
+          <div id="play_list_area_1" class="play_list_area">
+            <ul id="play_list_1" class="play_list"></ul>
+          </div>
+          <!---->
+        </div>
+        <audio
+          id="player_2"
+          src="./music/audio/piano/蔡健雅-Letting go.mp3"
+        ></audio>
+        <div id="bz_music_2" class="bz_music bz_music_2">
+          <div class="music_info">
+            <div class="center_list">
+              <ul>
+                <li class="list_current">
+                  <a href="javascript:;">
+                    <span id="list_title_2" class="list_title">Letting go</span>
+                  </a>
+                  <a href="javascript:;">
+                    <span id="list_singer_2" class="list_singer">蔡健雅</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="right_btn">
+              <a id="btn_list" href="javascript:;" onClick="showMusicList_2()">
+                <span id="showHide_2" class="list-btn"></span>
+              </a>
+            </div>
+            <div id="process_2" class="process">
+              <span id="process_slide_2" class="process_slide"></span>
+            </div>
+          </div>
+          <div class="music_controls">
+            <div id="time_2" class="time">00:00</div>
+            <div class="play_controls">
+              <a
+                id="btnBackward"
+                href="javascript:;"
+                class="btn_back fa fa-backward"
+                onClick="backword_2()"
+              ></a>
+              <a
+                id="btnPlay_2"
+                href="javascript:;"
+                class="btn_play fa fa-play"
+              ></a>
+              <a
+                id="btnForward"
+                href="javascript:;"
+                class="btn_forward fa fa-forward"
+                onClick="forward_2()"
+              ></a>
+            </div>
+            <a
+              id="volumeOff"
+              class="volumeOff fa fa-volume-off"
+              href="javascript:;"
+              onClick="volumeOff_2()"
+            ></a>
+            <div id="volume_2" class="volume">
+              <span id="volume_slide_2" class="btn_slide"></span>
+            </div>
+            <a
+              id="volumeUp"
+              class="volumeUp fa fa-volume-up"
+              href="javascript:;"
+              onClick="volumeUp_2()"
+            ></a>
+          </div>
+          <div id="play_list_area_2" class="play_list_area">
+            <ul id="play_list_2" class="play_list"></ul>
+          </div>
+          <!---->
+        </div>
+        <audio id="player_3" src="#"></audio>
+        <div id="bz_music_3" class="bz_music bz_music_3">
+          <div class="music_info">
+            <div class="center_list">
+              <ul>
+                <li class="list_current">
+                  <a href="javascript:;">
+                    <span id="list_title_3" class="list_title">待更新</span>
+                  </a>
+                  <a href="javascript:;">
+                    <span id="list_singer_3" class="list_singer">等等我</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="right_btn">
+              <a id="btn_list" href="javascript:;" onClick="showMusicList_3()">
+                <span id="showHide_3" class="list-btn"></span>
+              </a>
+            </div>
+            <div id="process_3" class="process">
+              <span id="process_slide_3" class="process_slide"></span>
+            </div>
+          </div>
+          <div class="music_controls">
+            <div id="time_3" class="time">00:00</div>
+            <div class="play_controls">
+              <a
+                id="btnBackward"
+                href="javascript:;"
+                class="btn_back fa fa-backward"
+                onClick="backword_3()"
+              ></a>
+              <a
+                id="btnPlay_3"
+                href="javascript:;"
+                class="btn_play fa fa-play"
+              ></a>
+              <a
+                id="btnForward"
+                href="javascript:;"
+                class="btn_forward fa fa-forward"
+                onClick="forward_3()"
+              ></a>
+            </div>
+            <a
+              id="volumeOff"
+              class="volumeOff fa fa-volume-off"
+              href="javascript:;"
+              onClick="volumeOff_3()"
+            ></a>
+            <div id="volume_3" class="volume">
+              <span id="volume_slide_3" class="btn_slide"></span>
+            </div>
+            <a
+              id="volumeUp"
+              class="volumeUp fa fa-volume-up"
+              href="javascript:;"
+              onClick="volumeUp_3()"
+            ></a>
+          </div>
+          <div id="play_list_area_3" class="play_list_area">
+            <ul id="play_list_3" class="play_list"></ul>
+          </div>
+          <!---->
+        </div>
+
+        <script
+          src="./music/js/index.js"
+          type="text/javascript"
+          charset="utf-8"
+        ></script>
+        <script
+          src="./music/js/index_2.js"
+          type="text/javascript"
+          charset="utf-8"
+        ></script>
+        <script
+          src="./music/js/index_3.js"
+          type="text/javascript"
+          charset="utf-8"
+        ></script>
+      </div>
+    </div>
+    <!---End-Music---->
+
+    <!---start-Code---->
+    <div class="code-box" id="code">
+      <div class="team-head">
+        <h3>Code</h3>
+        <p>這是程式教學網站</p>
+      </div>
+      <div class="wrap">
+        <div class="code-grids">
+          <div class="code-grid code-grid1">
+            <div class="code-grid-left" onClick="location.href='#';">
+              <span> </span>
+            </div>
+            <div class="code-grid-right">
+              <h3><a href="#">HTML</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+                quam est. Mauris faucibus tellus ac auctor posuere. Integer
+                lobortis purus a felis adipiscing, eget ornare justo semper.
+                Etiam commodo tincidunt ante.
+              </p>
+              <a class="codebtng" href="./code/HtmlCode.html">Show More</a>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <!----->
+          <div class="code-grid2">
+            <div class="code-grid2-left">
+              <h3><a href="#">CSS</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+                quam est. Mauris faucibus tellus ac auctor posuere. Integer
+                lobortis purus a felis adipiscing, eget ornare justo semper.
+                Etiam commodo tincidunt ante.
+              </p>
+              <a class="codebtnb" href="./code/CssCode.html">Show More</a>
+            </div>
+            <div class="code-grid2-right" onClick="location.href='#';">
+              <span> </span>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="code-grid code-grid3">
+            <div class="code-grid-left" onClick="location.href='#';">
+              <span> </span>
+            </div>
+            <div class="code-grid-right">
+              <h3><a href="#">JavaScript</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+                quam est. Mauris faucibus tellus ac auctor posuere. Integer
+                lobortis purus a felis adipiscing, eget ornare justo semper.
+                Etiam commodo tincidunt ante.
+              </p>
+              <a class="codebtng" href="./code/JavaScriptCode.html"
+                >Show More</a
+              >
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---end-Code---->
+
+    <!---Start Cook---->
+    <div class="Cook-box" id="cook">
+      <div class="team-head">
+        <h3>CooK</h3>
+        <p>Welcome ChangYu Restaurant</p>
+      </div>
+      <div class="item_box">
+        <div class="item_box_wp">
+          <div class="cook">
+            <ul>
+              <li class="li1" id="li1">
+                <div class="fold" style="display: none">
+                  <span class="img"></span>
+                  <span class="txt">主食</span>
+                </div>
+                <div class="unfold" style="display: block">
+                  <dl>
+                    <dt><img src="./cook/images/牛肉麵.jpg" /></dt>
+                    <dd>
+                      <b>主食<a href="./cook/Food.html">點此看更多>></a></b>
+                    </dd>
+                    <dd>內有炒飯、牛肉麵...</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="li2">
+                <div class="fold">
+                  <span class="img"></span>
+                  <span class="txt">家常菜</span>
+                </div>
+                <div class="unfold">
+                  <dl>
+                    <dt><img src="./cook/images/蒸蛋.jpg" /></dt>
+                    <dd>
+                      <b
+                        >家常菜<a href="./cook/HomeFood.html"
+                          >點此看更多>></a
+                        ></b
+                      >
+                    </dd>
+                    <dd>內有花椰菜炒蝦、醬油炒透抽，常見的各式家常菜~</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="li3">
+                <div class="fold">
+                  <span class="img"></span>
+                  <span class="txt">湯品</span>
+                </div>
+                <div class="unfold">
+                  <dl>
+                    <dt><img src="./cook/images/冬瓜蛤蠣雞湯.jpg" /></dt>
+                    <dd>
+                      <b>湯品<a href="./cook/Soup.html">點此看更多>></a></b>
+                    </dd>
+                    <dd>內有牛肉湯、香菇雞湯...</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="li4">
+                <div class="fold">
+                  <span class="img"></span>
+                  <span class="txt">點心</span>
+                </div>
+                <div class="unfold">
+                  <dl>
+                    <dt><img src="./cook/images/炸薯條.jpg" /></dt>
+                    <dd>
+                      <b>點心<a href="./cook/Dessert.html">點此看更多>></a></b>
+                    </dd>
+                    <dd>內有炸薯條、烤餅乾...</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="li5">
+                <div class="fold">
+                  <span class="img"></span>
+                  <span class="txt">飲品</span>
+                </div>
+                <div class="unfold">
+                  <dl>
+                    <dt><img src="./cook/images/珍珠奶茶.jpg" /></dt>
+                    <dd>
+                      <b>飲品<a href="./cook/Drink.html">點此看更多>></a></b>
+                    </dd>
+                    <dd>內有黑糖珍珠奶茶、百香多多...</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="li6">
+                <div class="fold">
+                  <span class="img"></span>
+                  <span class="txt">早點</span>
+                </div>
+                <div class="unfold">
+                  <dl>
+                    <dt><img src="./cook/images/焗烤土司.jpg" /></dt>
+                    <dd>
+                      <b
+                        >早點<a href="./cook/Breakfast.html">點此看更多>></a></b
+                      >
+                    </dd>
+                    <dd>內有蛋餅、焗烤土司...</dd>
+                  </dl>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---end Cook---->
+
+    <!---Start Tool---->
+    <div class="Tool-box" id="tool">
+      <div class="team-head">
+        <h3>Tool</h3>
+        <p>下面是我寫的小工具</p>
+      </div>
+      <div class="mod18">
+        <span id="prev" class="btn prev"></span>
+        <span id="next" class="btn next"></span>
+        <span id="prevTop" class="btn prev"></span>
+        <span id="nextTop" class="btn next"></span>
+        <div id="picBox" class="picBox">
+          <ul class="cf">
+            <li>
+              <a href="./tool/QRCode.html"
+                ><img src="./tool/images/QRcode/QRcode_B.PNG" alt=""
+              /></a>
+              <span>輸入文字即可產生QR Code!!</span>
+            </li>
+            <li>
+              <a href="./tool/Clock.html"
+                ><img src="./tool/images/Clock/Clock_B.png" alt=""
+              /></a>
+              <span>可轉換許多國家的時區喔!</span>
+            </li>
+            <li>
+              <a href="./tool/RandomNumber.html"
+                ><img
+                  src="./tool/images/RandomNumber/RandomNumber_B.png"
+                  alt=""
+              /></a>
+              <span
+                >輸入一個數值以及要生產的個數，即可得到0~該數值之間的隨機數。</span
+              >
+            </li>
+            <li>
+              <a href="#"><img src="./tool/images/watting_B.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./tool/images/watting_B.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./tool/images/watting_B.jpg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+        <div id="listBox" class="listBox">
+          <ul class="cf">
+            <li class="on">
+              <i class="arr2"></i
+              ><img src="./tool/images/QRcode/QRcode_S.PNG" alt="" />
+            </li>
+            <li>
+              <i class="arr2"></i
+              ><img src="./tool/images/Clock/Clock_S.png" alt="" />
+            </li>
+            <li>
+              <i class="arr2"></i
+              ><img
+                src="./tool/images/RandomNumber/RandomNumber_S.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <i class="arr2"></i
+              ><img src="./tool/images/watting_S.jpg" alt="" />
+            </li>
+            <li>
+              <i class="arr2"></i
+              ><img src="./tool/images/watting_S.jpg" alt="" />
+            </li>
+            <li>
+              <i class="arr2"></i
+              ><img src="./tool/images/watting_S.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <!---end Tool---->
+
+    <!----start-footer---->
+    <div class="footer" id="contact">
+      <div class="team-head">
+        <h3 style="color: #ffffff">Contact</h3>
+        <p style="color: #ffffff; padding-top: 5px; line-height: 40px">
+          您可透過點選下列應用程式與我聯繫與互動!!
+        </p>
+        <p style="color: #ffffff">包含Github、Instagram、Youtube、Gmail</p>
+      </div>
+      <div class="wrap">
+        <div class="footer-grids">
+          <div class="footer-left">
+            <ul>
+              <li>
+                <a class="fgithub" href="https://github.com/ChangYU1115/"> </a>
+              </li>
+              <li>
+                <a class="fins" href="https://www.instagram.com/yu___1115/">
+                </a>
+              </li>
+              <li>
+                <a
+                  class="fyoutube"
+                  href="https://www.youtube.com/channel/UCCx5X2pKde7tPJpMGwrwnxg"
+                >
+                </a>
+              </li>
+              <li>
+                <a class="fgoogle" href="mailto:a0952756905@gmail.com"> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----end-footer---->
+
+    <!----start-Top---->
+    <div class="actGotop"><a href="javascript:;" title="Top"></a></div>
+    <!----end-Top---->
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="" />
+    <meta name="author" content="Chang Yu" />
+    <title></title>
+    <base target="_blank" />
+    <!--ICON-->
+    <link rel="shortcut icon" href="" />
+    <!--CSS-->
+
+    <style>
+      @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-weight: 800;
+        font-family: "cwTeXYen", sans-serif;
+      }
+      .background {
+        background: rgb(255, 255, 255);
+        margin: 150px 180px;
+        height: 600px;
+        text-align: center;
+      }
+      #randomNum {
+        width: 200px;
+        height: 100px;
+        font-size: 30px;
+        margin-top: 250px;
+        text-align: center;
+      }
+      .button {
+        width: 100px;
+        height: 80px;
+        font-size: 30px;
+      }
+      .result {
+        color: rgb(10, 10, 10);
+        margin-top: 50px;
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      #randomResult {
+        color: blue;
+        padding-left: 20px;
+        font-size: 50px;
+      }
+
+      #text {
+        color: rgb(10, 10, 10);
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;
+      }
+
+      .Number_Input,
+      .Several_Input {
+        font-size: 30px;
+      }
+
+      .Number_Input {
+        margin-bottom: 50px;
+      }
+
+      #several {
+        margin-left: 50px;
+      }
+
+      #Number {
+        margin-left: 170px;
+      }
+
+      #several,
+      #Number {
+        width: 130px;
+        height: 50px;
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .button_input {
+        padding-top: 30px;
+        margin-left: 40px;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
+
+    <script>
+      // 宣告空陣列用於存儲亂數值
+      var rValues = [];
+      //設置亂數規則
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      var l = 0; //宣告紀錄值
+
+      //當按下按鈕時
+      function goRandom() {
+        //取得使用者選擇的數字範圍
+        randomNum = document.getElementById("Number").value;
+        total = document.getElementById("several").value;
+
+        // 清空之前的亂數值陣列
+        rValues = [];
+
+        //取得該數字範圍的亂數
+        for (let i = 0; i < total; i++) {
+          var r = getRandomInt(randomNum) + 1;
+
+          rValues.push(r);
+          console.log(rValues);
+        }
+
+        //回傳到 HTML 該亂數值
+        document.getElementById("randomResult").innerHTML = rValues.join("、");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="box">
+        <div class="EnterNumber">
+          <div class="Number_Input">
+            <label for="random" id="text">請輸入一個數值:</label>
+            <input type="input" id="Number" />
+          </div>
+          <div class="Several_Input">
+            <label for="random" id="text">請輸入要產生幾個隨機數:</label>
+            <input type="input" id="several" />
+          </div>
+        </div>
+        <div class="button_input">
+          <button class="button" onclick="goRandom()">Go</button>
+        </div>
+      </div>
+
+      <div class="result">本次隨機數結果為:</div>
+      <span id="randomResult"></span>
+    </div>
+  </body>
+</html>

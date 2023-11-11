@@ -1,0 +1,54 @@
+/* margin: 0; */
+/* border: 寬度 樣式 顏色; */
+/* padding: 0; */
+/* width: 0; */
+/* height: 0; */
+/* text-decoration : none (無效果)、overline (頂線)、line-through (中線/刪除線)、underline (底線)、inherit (繼承) */
+/* vertical-align: top;  垂直對齊 */
+* {
+  /* justify-content: center; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* flex: none; */
+  /* flex: auto; 盡量把容器的空間張滿 */
+  /* flex-wrap: wrap; 容器換行 */
+}
+
+/* 虛擬選擇器 */
+
+/* 
+    :hover -> 滑鼠移動到目標物上時，套用一組設定  
+
+    #btn:hover{
+      background-color:#88888;
+    }  
+*/
+
+/* 
+    :focus -> 當目標取得焦點時，套用一組設定 
+
+    input:focus{
+      border:2px solid #ff0000;
+    }  
+
+*/
+
+table {
+  width: 400px;
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: 1px solid #888888;
+  padding: 10px;
+}
+
+tr:nth-child(1) {
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(201, 202, 204);
+  color: rgb(25, 26, 27);
+}

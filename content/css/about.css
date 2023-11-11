@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+
+body {
+  font-family: Comic Sans MS, "cwTeXFangSong", sans-serif;
+}
+
+#page-wraper {
+  background: url(../images/page-bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+h4 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.25px;
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
